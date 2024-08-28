@@ -1,0 +1,11 @@
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/PedidosApplication.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/config/Configuracao.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/controller/PedidoController.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/dto/ItemDoPedidoDto.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/dto/PedidoDto.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/dto/StatusDto.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/model/ItemDoPedido.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/model/Pedido.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/model/Status.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/repository/PedidoRepository.java
+/home/vanessa/IdeaProjects/MS-Food/pedidos/src/main/java/br/com/alurafood/pedidos/service/PedidoService.java

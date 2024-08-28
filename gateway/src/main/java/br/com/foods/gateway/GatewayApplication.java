@@ -1,14 +1,13 @@
-package br.com.alurafood.pedidos;
+package br.com.foods.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class PedidosApplication {
+public class GatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PedidosApplication.class, args);
+		SpringApplication.run(GatewayApplication.class, args);
 	}
 
 }
