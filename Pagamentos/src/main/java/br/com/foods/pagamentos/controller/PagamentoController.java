@@ -58,9 +58,12 @@ public class PagamentoController {
         return ResponseEntity.noContent().build();
     }
     @PatchMapping("/{id}/confirmar")
-    @CircuitBreaker(name = "atulizaPedido",fallbackMethod = "")
+    @CircuitBreaker(name = "atulizaPedido",fallbackMethod = "pgAutorizadoComIntegracaoPendente")
     public void confirmarPagamento(@PathVariable @NotNull Long id){
         service.confirmarPagamento(id);
     }
 
+    public void pgAutorizadoComIntegracaoPendente(Long id, Exception e){
+        service.alteraStatus(id);
+    }
 }
