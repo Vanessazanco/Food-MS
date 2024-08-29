@@ -4,6 +4,7 @@ import br.com.foods.pagamentos.dto.PagamentoDto;
 import br.com.foods.pagamentos.model.Pagamento;
 import br.com.foods.pagamentos.service.PagamentoService;
 import com.netflix.discovery.converters.Auto;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -57,7 +58,9 @@ public class PagamentoController {
         return ResponseEntity.noContent().build();
     }
     @PatchMapping("/{id}/confirmar")
+    @CircuitBreaker(name = "atulizaPedido",fallbackMethod = "")
     public void confirmarPagamento(@PathVariable @NotNull Long id){
         service.confirmarPagamento(id);
     }
+
 }
