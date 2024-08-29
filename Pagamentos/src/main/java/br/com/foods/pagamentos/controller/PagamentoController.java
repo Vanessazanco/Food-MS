@@ -1,7 +1,10 @@
 package br.com.foods.pagamentos.controller;
 
 import br.com.foods.pagamentos.dto.PagamentoDto;
+import br.com.foods.pagamentos.model.Pagamento;
 import br.com.foods.pagamentos.service.PagamentoService;
+import com.netflix.discovery.converters.Auto;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/pagamentos")
@@ -52,5 +56,8 @@ public class PagamentoController {
         service.excluirPagamento(id);
         return ResponseEntity.noContent().build();
     }
-    
+    @PatchMapping("/{id}/confirmar")
+    public void confirmarPagamento(@PathVariable @NotNull Long id){
+        service.confirmarPagamento(id);
+    }
 }
